@@ -100,7 +100,7 @@ const QrScanner = (props: QrScannerProps) => {
     );
 }
 
-interface QrScannerProps {
+export interface QrScannerProps {
     /**
      * Media track constraints object, to specify which camera and capabilities to use
      */
@@ -175,21 +175,6 @@ interface QrScannerProps {
     overlay?: HTMLDivElement;
     /** just a temporary flag until we switch entirely to the new api */
     returnDetailedScanResult?: true;
-}
-
-interface QrScannerController {
-    hasFlash(): Promise<boolean>;
-    isFlashOn(): boolean;
-    toggleFlash(): Promise<void>;
-    turnFlashOn(): Promise<void>;
-    turnFlashOff(): Promise<void>;
-    destroy(): void;
-    start(): Promise<void>;
-    stop(): void;
-    pause(stopStreamImmediately?: boolean): Promise<boolean>;
-    setCamera(facingModeOrDeviceId: NimiqQrScanner.FacingMode | NimiqQrScanner.DeviceId): Promise<void>;
-    setGrayscaleWeights(red: number, green: number, blue: number, useIntegerApproximation?: boolean): void;
-    setInversionMode(inversionMode: NimiqQrScanner.InversionMode): void;
 }
 
 export default QrScanner;
