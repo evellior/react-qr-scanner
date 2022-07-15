@@ -10,7 +10,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rollup": "rollup -c --inlineDynamicImports"
+    "rollup": "rollup -c --inlineDynamicImports",
+    "demo": "npm start --prefix demo"
   },
   "keywords": [
     "react",
