@@ -49,6 +49,6 @@
   },
   "homepage": "https://github.com/Evellior/react-qr-scanner#readme",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Evellior"
+    "registry": "https://registry.npmjs.org/evellior"
   }
 }
