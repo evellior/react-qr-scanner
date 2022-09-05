@@ -1,6 +1,6 @@
 {
   "name": "@evellior/react-qr-scanner",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A React Component implementation of Nimiq's QR Scanner",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
