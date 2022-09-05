@@ -49,9 +49,10 @@ const QrScanner = (props: QrScannerProps) => {
     React.useEffect(() => {
         if (video.current) {
             // create scanner bound to video html element
+            let target = video.current
             
-            const scanner = new NimiqQrScanner(
-                video.current,
+            var scanner = new NimiqQrScanner(
+                target,
                 result => {
                     if (onDecode) onDecode(result);
                     if (onScan) onScan(result);
@@ -71,9 +72,17 @@ const QrScanner = (props: QrScannerProps) => {
                 }
             )
 
-            if (startOnLaunch ?? true) scanner.start()
+            if (startOnLaunch) scanner.start().then(
+                _ => {/*Started successfully*/},
+                err => console.log("Error starting scanner: ", err)
+            )
 
             if (onMount) onMount(scanner);
+
+            return () => {
+                // dispose of component
+                scanner.destroy()
+            }
         }
     }, [])
 

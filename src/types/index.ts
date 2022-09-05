@@ -37,7 +37,7 @@ export interface QrScannerProps {
     /**
      * A handler to receive the underlying scan controller
      */
-    onMount?: (controller: NimiqQrScanner) => null
+    onMount?: (controller: NimiqQrScanner) => void
     /**
      * A handler that can handle both successful and unsuccessful scans
      */

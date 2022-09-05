@@ -1,4 +1,6 @@
 import QrScanner from "./QrScanner";
-export { QrScannerProps, Nimiq }  from './types'
+import { QrScannerProps as qsprops }  from './types'
 
 export default QrScanner
+export type QrScannerProps = qsprops
+export { Nimiq } from './types'
